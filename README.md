@@ -13,6 +13,8 @@
     + Order details
     + Invoices
     + etc.
+ + Host Website: Deploy App to a hosting service.
+  + To see more details click [here](https://www.animaapp.com/blog/industry/8-free-react-app-hosting-services/) or [here](https://www.makeuseof.com/heroku-alternatives-free-full-stack-hosting/)
 
 ## Instructions
 
