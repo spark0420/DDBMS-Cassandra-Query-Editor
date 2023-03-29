@@ -2,9 +2,9 @@
 
 ## TODO LIST:
 
-+ Add AWS KeySpaces connection in [useData.js]()
++ Add AWS KeySpaces connection in [useData.js](https://github.com/arm-diaz/DDBMS-Cassandra-Query-Editor/blob/main/src/hooks/useData.js)
   + Right now, it is quering data from a repository endpoint.
-+ Modify Query Names in Navigation Panel [constants.js]()
++ Modify Query Names in Navigation Panel [constants.js](https://github.com/arm-diaz/DDBMS-Cassandra-Query-Editor/blob/main/src/constants/constants.js)
   + Right now, it has the table names of the database. We should use the Business Logic Name, such as:
     + Inventory for supplier
     + Current products
