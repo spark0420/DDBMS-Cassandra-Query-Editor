@@ -63,6 +63,12 @@ cqlsh-expansion cassandra.us-east-1.amazonaws.com 9142 --ssl -u "ServiceUserName
 
 ### Populate Tables
 
+Before writing any data run the following command:
+
+```sql
+CONSISTENCY LOCAL_QUORUM
+```
+
 ProductSupplier table:
 
 ```sql
