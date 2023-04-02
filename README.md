@@ -1,5 +1,9 @@
 # Distributed Databases: Semester Project
 
+## Instructions
+
+![Instructions](src/assets/screenshots/Distributed%20Database%20-%20Semester%20Project.png)
+
 ## TODO LIST:
 
 + Add AWS KeySpaces connection in [useData.js](https://github.com/arm-diaz/DDBMS-Cassandra-Query-Editor/blob/main/src/hooks/useData.js)
@@ -68,10 +72,6 @@ For example, let's say X is equals to 90.
 ```sql
 select productname, unitprice from cassandra.productsupplier WHERE unitprice > 90 ALLOW FILTERING;
 ```
-
-## Instructions
-
-![Instructions](src/assets/screenshots/Distributed%20Database%20-%20Semester%20Project.png)
 
 ## Run Web Application
 
