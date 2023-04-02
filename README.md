@@ -27,6 +27,8 @@ We use AWS CloudShell to configure our workspace.
 References:
 
 + [Using the Amazon Keyspaces Toolkit from AWS CloudShell](https://github.com/aws-samples/amazon-keyspaces-toolkit/tree/master/aws-cloudshell)
++ [Generate service-specific credentials](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.credentials.ssc.html)
++ [Using cqlsh to connect to Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/programmatic.cqlsh.html#using_cqlsh)
 + [Using a Cassandra Node.js client driver to access Amazon Keyspaces programmatically](https://docs.aws.amazon.com/keyspaces/latest/devguide/using_nodejs_driver.html)
 
 ### Create Cassandra Keyspace
@@ -41,6 +43,22 @@ ProductSupplier table:
 
 ```sh
 aws keyspaces create-table --keyspace-name 'cassandra' --table-name 'productsupplier' --schema-definition 'file://aws/keyspaces/cassandra/productsupplier/schema_definition.json'
+```
+
+### KeySpaces Connection
+
+Generate service-specific credentials using the AWS CLI:
+
+```sh
+aws iam create-service-specific-credential \
+    --user-name alice \
+    --service-name cassandra.amazonaws.com
+```
+
+Connect to Amazon Keyspaces with the following command:
+
+```sh
+cqlsh-expansion cassandra.us-east-1.amazonaws.com 9142 --ssl -u "ServiceUserName" -p "ServicePassword"
 ```
 
 ### Populate Tables
