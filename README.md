@@ -51,7 +51,7 @@ Generate service-specific credentials using the AWS CLI:
 
 ```sh
 aws iam create-service-specific-credential \
-    --user-name alice \
+    --user-name username \
     --service-name cassandra.amazonaws.com
 ```
 
