@@ -2,7 +2,7 @@
 
 ## Instructions
 
-![Instructions](src/assets/screenshots/Distributed%20Database%20-%20Semester%20Project.png)
+![Instructions](assets/screenshots/Distributed%20Database%20-%20Semester%20Project.png)
 
 ## TODO LIST:
 
@@ -116,8 +116,8 @@ Then, open [http://localhost:3000](http://localhost:3000) to view it in the brow
 
 ## Website
 
-![HomePage](src/assets/screenshots/Website%20template%201.png)
+![HomePage](assets/screenshots/Website%20template%201.png)
 
-![NavigationMenu](src/assets/screenshots/Website%20template%202.png)
+![NavigationMenu](assets/screenshots/Website%20template%202.png)
 
-![QueryDB](src/assets/screenshots/Website%20template%203.png)
+![QueryDB](assets/screenshots/Website%20template%203.png)
