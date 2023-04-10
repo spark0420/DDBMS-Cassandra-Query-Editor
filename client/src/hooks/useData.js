@@ -4,7 +4,8 @@ import toast from "react-hot-toast";
 import TABLE_NAMES from "../constants/constants";
 
 const getURL = (name) =>
-  `https://api.github.com/repos/graphql-compose/graphql-compose-examples/contents/examples/northwind/data/csv/${name}.csv`;
+  `http://localhost:5000/productsupplier`;
+  //`https://api.github.com/repos/graphql-compose/graphql-compose-examples/contents/examples/northwind/data/csv/${name}.csv`;
 
 const useData = (tableName) => {
   const [data, setData] = useState([]);
@@ -28,9 +29,10 @@ const useData = (tableName) => {
       const name = TABLE_NAMES.find((name) => name === tableName);
       if (name) {
         setError(false);
-        fetch(getURL(tableName), {
+        fetch(getURL, {
           headers: {
-            Accept: "application/vnd.github.v4+raw",
+            ContentType: 'application/json',
+            Accept: "application/json",
           },
         })
           .then((res) => {
