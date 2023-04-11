@@ -78,9 +78,9 @@ select supplierid, companyname, productid, productname from cassandra.productsup
 select categoryid, productname, quantityperunit,unitsinstock, discontinued  from cassandra.productsupplier WHERE discontinued = 0 ALLOW FILTERING;
 ```
 
-+ Products Above "X" Price:
++ Products Above Average Price:
 
-For example, let's say X is equals to 90.
+For example, let's say the Average Price is equals to $50.
 
 ```sql
 select productname, unitprice from cassandra.productsupplier WHERE unitprice > 90 ALLOW FILTERING;
