@@ -5,18 +5,18 @@ const app = express()
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
-//const productRoutes = require('./routes/products')  
-//const ordersRoutes = require('./routes/orders')  
-const casRoutes = require('./routes/productsupplier')
+const productsAboveAverageRoutes = require('./routes/productsaboveavarage')  
+const productsByCategoryRoutes = require('./routes/productsbycategory')  
+const inventoryPerSupplierRoutes = require('./routes/inventorypersupplier')
 const { errorMonitor } = require('events')
 
 app.use(morgan('dev'))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-//app.use('/products',  productRoutes)
-//app.use('/orders',  ordersRoutes)
-app.use('/productsupplier',  casRoutes)
+app.use('/productsaboveavarage',  productsAboveAverageRoutes)
+app.use('/productsbycategory',  productsByCategoryRoutes)
+app.use('/inventorypersupplier',  inventoryPerSupplierRoutes)
 
 app.use((req, res, next)=>{
     

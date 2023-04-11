@@ -19,7 +19,7 @@ const client = new cassandra.Client({
         sslOptions: sslOptions1,
         protocolOptions: { port: 9142 }
 });
-const query = 'SELECT * FROM cassandra.productsupplier';
+const query = 'select productname, unitprice from cassandra.productsupplier WHERE unitprice > 50 ALLOW FILTERING';
 
 
 console.log('----Debug: client', client)

@@ -51,7 +51,7 @@ const useData = (tableName) => {
       if (name) {
         setError(false);
         
-        fetch('http://localhost:5000/productsupplier', {
+        fetch(`http://localhost:5000/${name}`, {
           method: 'GET',
           mode: 'cors',
         })

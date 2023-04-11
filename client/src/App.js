@@ -13,7 +13,7 @@ const Footer = React.lazy(() => import("./components/layouts/Footer"));
 
 const App = () => {
   const [query, setQuery] = useState("");
-  const [value, setValue] = useState("select * from productsupplier");
+  const [value, setValue] = useState("select * from inventorypersupplier");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
