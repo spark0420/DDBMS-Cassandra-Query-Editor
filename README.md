@@ -88,17 +88,16 @@ select productname, unitprice from cassandra.productsupplier WHERE unitprice > 9
 
 ## Run Web Application
 
-Create a `.env` file within the directory `server` and include the following variables:
+Set your credentials within `.env` in the  `server` directory:
 
-+ REACT_APP_AWS_KEYSPACES_SERVICE_USERNAME=""
-+ REACT_APP_AWS_KEYSPACES_SERVICE_PASSWORD=""
++ REACT_APP_AWS_KEYSPACES_SERVICE_USERNAME="YOUR_SERVICE_USERNAME"
++ REACT_APP_AWS_KEYSPACES_SERVICE_PASSWORD="YOUR_SERVICE_PASSWORD"
 
-Open your terminal and run:
+Open two terminals and run:
 
 ```sh
 cd server && npm i && npm start
 cd client && npm i && npm start
-npm run deploy ## DO NOT RUN YET
 ```
 
 Then, open [http://localhost:3000](http://localhost:3000) to view it in the browser.
