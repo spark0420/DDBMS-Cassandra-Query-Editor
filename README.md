@@ -64,7 +64,7 @@ ProductSupplier table:
 COPY cassandra.productsupplier (supplierid,productid,categoryid,companyname,productname,categoryname,quantityperunit,unitsinstock,unitprice,discontinued) FROM 'data/productsupplier.csv' WITH DELIMITER='|' AND HEADER=TRUE;
 ```
 
-### Predefined SQL Queries: (TODO: ADD THESE QUERIES IN THE EDITOR)
+### Predefined SQL Queries
 
 + Inventory per Suppliers:
 
