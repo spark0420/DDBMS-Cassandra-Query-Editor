@@ -34,6 +34,24 @@ ProductSupplier table:
 aws keyspaces create-table --keyspace-name 'cassandra' --table-name 'productsupplier' --schema-definition 'file://aws/keyspaces/cassandra/productsupplier/schema_definition.json'
 ```
 
+Invoices table:
+
+```sh
+aws keyspaces create-table --keyspace-name 'cassandra' --table-name 'invoices' --schema-definition 'file://aws/keyspaces/cassandra/invoices/schema_definition.json'
+```
+
+Customers and Suppliers by City table:
+
+```sh
+aws keyspaces create-table --keyspace-name 'cassandra' --table-name 'customersandsuppliersbycity' --schema-definition 'file://aws/keyspaces/cassandra/customersandsuppliersbycity/schema_definition.json'
+```
+
+Sales by Category table:
+
+```sh
+aws keyspaces create-table --keyspace-name 'cassandra' --table-name 'salesbycategory' --schema-definition 'file://aws/keyspaces/cassandra/salesbycategory/schema_definition.json'
+```
+
 ### KeySpaces Connection
 
 Generate service-specific credentials using the AWS CLI:
@@ -47,7 +65,7 @@ aws iam create-service-specific-credential \
 Connect to Amazon Keyspaces with the following command:
 
 ```sh
-cqlsh-expansion cassandra.us-east-1.amazonaws.com 9142 --ssl -u "ServiceUserName" -p "ServicePassword"
+cqlsh-expansion cassandra.us-east-1.amazonaws.com 9142 --ssl -u "armando+1-at-812301871030" -p "JkZirBhrQxUUXEE99hhVnLu4HGwN3ksV0OskjFCMEwc="
 ```
 
 ### Populate Tables
@@ -61,7 +79,25 @@ CONSISTENCY LOCAL_QUORUM
 ProductSupplier table:
 
 ```sql
-COPY cassandra.productsupplier (supplierid,productid,categoryid,companyname,productname,categoryname,quantityperunit,unitsinstock,unitprice,discontinued) FROM 'data/productsupplier.csv' WITH DELIMITER='|' AND HEADER=TRUE;
+COPY cassandra.productsupplier (supplierid,productid,categoryid,companyname,productname,categoryname,quantityperunit,unitsinstock,unitprice,discontinued) FROM 'data/csv/productsupplier.csv' WITH DELIMITER='|' AND HEADER=TRUE;
+```
+
+Invoices table:
+
+```sql
+COPY cassandra.invoices (shipname,shipaddress,shipcity,shipregion,shippostalcode,shipcountry,customerid,customername,address,city,region,postalcode,country,salesperson,orderid,orderdate,requireddate,shippeddate,shippername,productid,productname,unitprice,quantity,discount,extendedprice,freight) FROM 'data/csv/invoices.csv' WITH DELIMITER='|' AND HEADER=TRUE;
+```
+
+Customers and Suppliers by City table:
+
+```sql
+COPY cassandra.customersandsuppliersbycity (city,companyname,contactname,relationship) FROM 'data/csv/customersandsuppliersbycity.csv' WITH DELIMITER='|' AND HEADER=TRUE;
+```
+
+Sales by Category table:
+
+```sql
+COPY cassandra.salesbycategory (categoryid,categoryname,productname,productsales) FROM 'data/csv/salesbycategory.csv' WITH DELIMITER='|' AND HEADER=TRUE;
 ```
 
 ### Predefined SQL Queries

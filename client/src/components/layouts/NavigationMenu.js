@@ -79,7 +79,7 @@ const Navbar = React.memo(({ setQuery, setValue, isOpen, setIsOpen }) => {
                 clipRule="evenodd"
               />
             </svg>
-            <aside className="p-5">
+            <aside className="p-6">
               {TABLE_NAMES.map((name) => {
                 const finalName = convertToNormalString(name);
                 return (

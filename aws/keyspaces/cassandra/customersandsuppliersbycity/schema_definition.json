@@ -1,0 +1,37 @@
+{
+"allColumns":[
+         {
+            "name":"city",
+            "type":"text"
+         },
+         {
+            "name":"companyname",
+            "type":"text"
+         },
+         {
+            "name":"contactname",
+            "type":"text"
+         },
+         {
+    	    "name":"relationship",
+            "type":"text"
+         }
+      ],
+      "clusteringKeys":[
+         {
+            "name":"relationship",
+            "orderBy":"ASC"
+         }
+      ],
+      "partitionKeys":[
+         {
+            "name":"city"
+         },
+         {
+            "name":"companyname"
+         },
+         {
+            "name":"contactname"
+         }
+      ]
+ }

@@ -1,0 +1,35 @@
+{
+"allColumns":[
+         {
+            "name":"categoryid",
+            "type":"int"
+         },
+         {
+            "name":"categoryname",
+            "type":"text"
+         },
+         {
+            "name":"productname",
+            "type":"text"
+         },
+         {
+    	    "name":"productsales",
+            "type":"float"
+         }
+
+      ],
+      "clusteringKeys":[
+         {
+            "name":"categoryname",
+            "orderBy":"ASC"
+         }
+      ],
+      "partitionKeys":[
+         {
+            "name":"categoryid"
+         },
+         {
+            "name":"productname"
+         }
+      ]
+ }

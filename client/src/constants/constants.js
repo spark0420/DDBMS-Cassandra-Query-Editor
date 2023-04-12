@@ -1,7 +1,10 @@
 const TABLE_NAMES = [
   "inventorypersupplier",
+  "customersandsuppliersbycity",
+  "invoices",
   "productsaboveavarage",
-  "productsbycategory"
+  "productsbycategory",
+  "salesbycategory"
 
 ];
 
